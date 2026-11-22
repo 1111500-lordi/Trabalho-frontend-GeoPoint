@@ -1,4 +1,4 @@
-export default function CampoTexto(props) {
+export default function CampoCadastrar(props) {
     return (
         <div>
             <label htmlFor={props.nome}>{props.rotulo}</label> 
