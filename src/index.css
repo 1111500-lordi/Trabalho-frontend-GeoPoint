@@ -1,0 +1,41 @@
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.filtro {
+  position: relative;
+  margin: 20px 0 16px;
+}
+
+.filtro svg {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6b7280;
+  pointer-events: none;
+}
+
+.filtro input {
+  width: 100%;
+  padding: 13px 20px 13px 46px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 999px;
+  font: inherit;
+  color: #1f2430;
+}
+
+.filtro input:focus {
+  outline: none;
+  border-color: #FF4D24;
+  box-shadow: 0 0 0 3px rgba(255, 77, 36, 0.18);
+}
