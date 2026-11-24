@@ -1,3 +1,41 @@
+
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color-scheme: light;
+}
+
+:root[data-tema="claro"] {
+  --cor-fundo: #f3f4f6;
+  --cor-superficie: #ffffff;
+  --cor-texto: #1f2430;
+  --cor-texto-secundario: #6b7280;
+  --cor-borda: #e5e7eb;
+  --cor-destaque: #ff4d24;
+  --cor-destaque-hover: #e6401b;
+  --cor-tabela-cabecalho: #fff0eb;
+}
+
+:root[data-tema="escuro"] {
+  color-scheme: dark;
+  --cor-fundo: #171b25;
+  --cor-superficie: #252c3a;
+  --cor-texto: #f9fafb;
+  --cor-texto-secundario: #aab3c2;
+  --cor-borda: #3b4556;
+  --cor-destaque: #ff6344;
+  --cor-destaque-hover: #ff8068;
+  --cor-tabela-cabecalho: #34303a;
+}
+
+body {
+  margin: 0;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-family: Arial, Helvetica, sans-serif;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -68,7 +106,6 @@
   color: white;
 }
 
-/* ---------- Tabela ---------- */
 .tabela-container {
   background: white;
   border: 1px solid #e5e7eb;
@@ -140,4 +177,330 @@
   flex-wrap: wrap;
   align-items: center;
   gap: 8px;
+}
+
+.navbar {
+  background-color: var(--cor-superficie);
+  border-bottom: 1px solid var(--cor-borda);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-conteudo {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.navbar-logo {
+  color: var(--cor-destaque);
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.navbar-links a {
+  color: var(--cor-texto-secundario);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.navbar-links a:hover,
+.navbar-links a.active {
+  color: var(--cor-destaque);
+}
+
+.botao-tema {
+  padding: 9px 14px;
+  border: 1px solid var(--cor-borda);
+  border-radius: 8px;
+  background-color: var(--cor-superficie);
+  color: var(--cor-texto);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.botao-tema:hover {
+  background-color: var(--cor-fundo);
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+h1 {
+  margin: 0 0 12px;
+  color: var(--cor-texto);
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+}
+
+h2 {
+  color: var(--cor-texto);
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+p {
+  color: var(--cor-texto-secundario);
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  main {
+    padding: 28px 16px;
+  }
+
+  h1 {
+    font-size: 1.65rem;
+  }
+
+  .navbar-conteudo {
+    flex-wrap: wrap;
+    padding: 14px 16px;
+  }
+
+  .navbar-links {
+    gap: 14px;
+  }
+}
+
+.filtro input {
+  background-color: var(--cor-superficie);
+  color: var(--cor-texto);
+  border-color: var(--cor-borda);
+}
+
+.filtro input::placeholder {
+  color: var(--cor-texto-secundario);
+}
+
+.filtro input:focus {
+  border-color: var(--cor-destaque);
+}
+
+.tabela-container {
+  background-color: var(--cor-superficie);
+  border-color: var(--cor-borda);
+}
+
+.tabela th,
+.tabela td {
+  color: var(--cor-texto);
+  border-bottom-color: var(--cor-borda);
+}
+
+.tabela th {
+  background-color: var(--cor-tabela-cabecalho);
+  color: var(--cor-destaque);
+}
+
+.tabela tbody tr:hover {
+  background-color: var(--cor-fundo);
+}
+
+.link-nome {
+  color: var(--cor-destaque);
+}
+
+.botao-primario {
+  background-color: var(--cor-destaque);
+}
+
+.botao-primario:hover {
+  background-color: var(--cor-destaque-hover);
+}
+
+.botao-secundario {
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+}
+
+.botao-perigo {
+  background-color: #dc2626;
+  color: white;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.campo-formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.campo-formulario label {
+  color: var(--cor-texto);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.campo-formulario input,
+.campo-formulario textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 14px;
+  border: 1px solid var(--cor-borda);
+  border-radius: 8px;
+  background-color: var(--cor-superficie);
+  color: var(--cor-texto);
+  font: inherit;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.campo-formulario textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.campo-formulario input:focus,
+.campo-formulario textarea:focus {
+  outline: none;
+  border-color: var(--cor-destaque);
+  box-shadow: 0 0 0 3px rgba(255, 77, 36, 0.15);
+}
+
+.campo-formulario input::placeholder,
+.campo-formulario textarea::placeholder {
+  color: var(--cor-texto-secundario);
+}
+
+.mensagem-erro {
+  margin: 0;
+  color: #ef4444;
+  font-size: 0.85rem;
+}
+
+form button[type="submit"] {
+  align-self: flex-start;
+  padding: 11px 24px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--cor-destaque);
+  color: white;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+form button[type="submit"]:hover {
+  background-color: var(--cor-destaque-hover);
+}
+
+@media (max-width: 600px) {
+  main {
+    padding: 24px 14px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .navbar-conteudo {
+    justify-content: center;
+    gap: 16px;
+    padding: 14px;
+  }
+
+  .navbar-logo {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar-links {
+    justify-content: center;
+    gap: 18px;
+  }
+
+  .botao-tema {
+    padding: 8px 12px;
+  }
+
+  .filtro {
+    margin: 16px 0;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .tabela-container {
+    overflow-x: visible;
+    border: none;
+    background: transparent;
+  }
+
+  .tabela,
+  .tabela tbody,
+  .tabela tr,
+  .tabela td {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .tabela thead {
+    display: none;
+  }
+
+  .tabela tbody tr {
+    margin-bottom: 16px;
+    padding: 8px 14px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 12px;
+    background: var(--cor-superficie);
+  }
+
+  .tabela tbody td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--cor-borda);
+    white-space: normal;
+    text-align: right;
+  }
+
+  .tabela tbody td::before {
+    content: attr(data-label);
+    color: var(--cor-texto-secundario);
+    font-weight: 700;
+    text-align: left;
+  }
+
+  .tabela tbody td.col-acoes {
+    display: block;
+    border-bottom: none;
+  }
+
+  .tabela tbody td.col-acoes::before {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .tabela .acoes {
+    flex-wrap: wrap;
+  }
+
+  .tabela .botao {
+    flex: 1;
+  }
 }

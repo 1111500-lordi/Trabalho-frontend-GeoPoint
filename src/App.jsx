@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar.jsx';
 import ListaPontos from './pages/ListaPontos.jsx';
@@ -6,9 +7,22 @@ import DetalhePonto from './pages/DetalhePonto.jsx';
 import NaoEncontrada from './pages/NaoEncontrada.jsx';
 
 function App() {
+    const [tema, setTema] = useState(() => {
+    return localStorage.getItem('tema') || 'claro';
+  });
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-tema', tema);
+    localStorage.setItem('tema', tema);
+  }, [tema]);
+
+    function alternarTema() {
+    setTema(tema === 'claro' ? 'escuro' : 'claro');
+  }
+
   return (
     <>
-      <Navbar />
+      <Navbar tema={tema} alternarTema={alternarTema} />
 
       <main>
         <Routes>
