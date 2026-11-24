@@ -1,0 +1,16 @@
+[
+  {
+    "id": "9b7c7c28-2e6b-4fd3-b1f6-0c4590c5fc1b",
+    "name": "Praça Central Editada",
+    "description": "praça",
+    "latitude": -12,
+    "longitude": -15
+  },
+  {
+    "id": "7feaf622-8819-40cf-8fed-901f209fed95",
+    "name": "teste",
+    "description": "teste pro filtro",
+    "latitude": 51,
+    "longitude": -100
+  }
+]
