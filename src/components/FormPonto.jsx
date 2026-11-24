@@ -3,7 +3,7 @@ import CampoDescricao from "./CampoDescricao";
 export default function FormPonto(props) {
     
     return (
-        <form onSubmit={props.aoEnviar}>            
+        <form onSubmit={props.aoEnviar}>
             <CampoCadastrar
                 rotulo = "Nome"
                 nome = "nome"
