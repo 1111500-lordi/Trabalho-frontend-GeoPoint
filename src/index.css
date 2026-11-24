@@ -39,3 +39,105 @@
   border-color: #FF4D24;
   box-shadow: 0 0 0 3px rgba(255, 77, 36, 0.18);
 }
+
+.botao {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 16px;
+  border: none;
+  border-radius: 8px;
+  font: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.botao-primario {
+  background-color: #ff4d24;
+  color: white;
+}
+
+.botao-secundario {
+  background-color: #e5e7eb;
+  color: #1f2430;
+}
+
+.botao-perigo {
+  background-color: #dc2626;
+  color: white;
+}
+
+/* ---------- Tabela ---------- */
+.tabela-container {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  overflow-x: auto;
+}
+
+.tabela {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabela th,
+.tabela td {
+  padding: 14px 16px;
+  text-align: left;
+  vertical-align: middle;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.col-nome {
+  overflow-wrap: break-word;
+}
+
+.col-descricao {
+  overflow-wrap: anywhere;
+}
+
+.col-numero,
+.col-acoes {
+  white-space: nowrap;
+}
+
+.tabela .acoes {
+  flex-wrap: nowrap;
+}
+
+.tabela th {
+  background: #fff0eb;
+  color: #c2361a;
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+.tabela tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.tabela tbody tr:hover {
+  background: #fffaf8;
+}
+
+.tabela .botao {
+  padding: 6px 14px;
+  font-size: 0.8125rem;
+}
+
+.link-nome {
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.link-nome:hover {
+  text-decoration: underline;
+}
+
+.acoes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
